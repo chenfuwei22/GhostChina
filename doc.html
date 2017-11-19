@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    	<title>Ghost 开源博客平台 | Ghost中文网</title>
+  		<link rel="stylesheet" href="./css/commmon.css">
+   	    <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+	</head>
+	<body>
+		<header class="doc-header">
+           <a href="index.html" title="Ghost开源博客平台">
+              <img src="./images/InBackground.png" alt="">
+     	   </a>
+        </header>
+        
+        <nav class="navbar navbar-default navagition" role="navigation">
+            <div class="container">
+            	
+            	<div class="row">
+                	<div class="col-sm-12 ">
+                        <!-- 缩小导航栏 -->
+                        <div class="navbar-header">
+                            <span class="nav-toggle collapsed navbar-brand" data-toggle="collapse" data-target="#main-menu">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="glyphicon glyphicon-menu-hamburger"></span>
+                            </span>
+                        </div>
+
+                        <!-- 正常导航栏 -->
+                        <div class="collapse navbar-collapse" id="main-menu">
+                            <ul class="nav nav-pills navstyle">
+                                <li role="presentation"><a href="index.html">首页</a></li>
+                                <li role="presentation"><a href="forum.html">论坛</a></li>
+                                <li role="presentation" class="nav-current"><a href="doc.html">快捷手册</a></li>
+                                <li role="presentation"><a href="#">中文文档</a></li>
+                                <li role="presentation"><a href="download.html">下载</a></li>               
+                                <li role="presentation"><a href="about.html">关于</a></li>
+                            </ul>
+                        </div>
+              	    </div>
+          	 	</div>
+           </div>
+        </nav>
+        
+        <section class="content-wrap">
+        	<div class="container">
+        		<div class="row">
+                	<!-- 左侧栏，主要文章内容 -->
+                	<div class="col-md-8">
+                		<div class="animated slideInLeft" id="bounceIn">
+                		<article class="post">
+                			<header class="post-head">
+                				<h1 class="post-title">Ghost 快捷手册</h1>
+                			</header>
+                			<section class="post-content">
+                				<section>
+                					<h2>
+                						<a href="#">安装/设置</a>
+                					</h2>
+                					<table class="table">
+                						<tbody>
+                							<tr>
+                								<td>最新版本</td>
+                								<td><a href="#">下载</a></td>
+                							</tr>
+                							<tr>
+               									<td>安装指令</td>
+                								<td>npm install --production</td>
+            								</tr>
+								            <tr>
+								                <td>启动 Ghost</td>
+								                <td>npm start</td>
+								            </tr>
+								            <tr>
+								                <td>停止 Ghost</td>
+								                <td>Ctrl+C</td>
+								            </tr>
+                						</tbody>
+                					</table>
+                				</section>
+                				
+                				<hr style="border-bottom: 1px solid #DA6426;margin-bottom: 60px;margin-top: 60px; margin-left:-35px;margin-right: -35px;">
+                				<section>
+                					<h2>文件路径</h2>
+                					    <table class="table">
+									        <tbody>
+									            <tr>
+									                <td>配置文件</td>
+									                <td>/config.js</td>
+									            </tr>
+									            <tr>
+									                <td>主题</td>
+									                <td>/content/themes</td>
+									            </tr>
+									            <tr>
+									                <td>插件</td>
+									                <td>/content/apps</td>
+									            </tr>
+									            <tr>
+									                <td>图片</td>
+									                <td>/content/images</td>
+									            </tr>
+									            <tr>
+									                <td>导航（默认）</td>
+									                <td>/core/server/helpers/tpl/navigation.hbs</td>
+									            </tr>
+									            <tr>
+									                <td>分页（默认）</td>
+									                <td>core/server/helpers/tpl/pagination.hbs</td>
+									            </tr>
+									        </tbody>
+									    </table>
+                				</section>
+                				
+                				
+								<hr style="border-bottom: 1px solid #DA6426;margin-bottom: 60px;margin-top: 60px; margin-left:-35px;margin-right: -35px;">
+                				
+                				<section>
+                					<h2><a href="#">MarkDown</a>/快捷键</h2>
+									    <table class="table">
+									        <tbody>
+									            <tr>
+									                <td>Save</td>
+									                <td>-</td>
+									                <td>Ctrl + S</td>
+									            </tr>
+									            <tr>
+									                <td>Bold</td>
+									                <td>**text**</td>
+									                <td>Ctrl / Cmd + B</td>
+									            </tr>
+									            <tr>
+									                <td>Emphasize</td>
+									                <td>__text__</td>
+									                <td>Ctrl / Cmd + I</td>
+									            </tr>
+									            <tr>
+									                <td>Inline Code</td>
+									                <td>`code`</td>
+									                <td>Cmd + K / Ctrl + Shift + K</td>
+									            </tr>
+									            <tr>
+									                <td>Link</td>
+									                <td>[title](http://)</td>
+									                <td>Ctrl + Shift + L</td>
+									            </tr>
+									            <tr>
+									                <td>Image</td>
+									                <td>![alt](http://)</td>
+									                <td>Ctrl + Shift + I</td>
+									            </tr>
+									            <tr>
+									                <td>List</td>
+									                <td>* item</td>
+									                <td>Ctrl + L</td>
+									            </tr>
+									            <tr>
+									                <td>H1</td>
+									                <td># Heading</td>
+									                <td>Ctrl + Alt + 1</td>
+									            </tr>
+									            <tr>
+									                <td>H2</td>
+									                <td>## Heading</td>
+									                <td>Ctrl + Alt + 2</td>
+									            </tr>
+									            <tr>
+									                <td>H3</td>
+									                <td>### Heading</td>
+									                <td>Ctrl + Alt + 3</td>
+									            </tr>
+									            <tr>
+									                <td>Select Word</td>
+									                <td></td>
+									                <td>Ctrl + Alt + W</td>
+									            </tr>
+									            <tr>
+									                <td>Uppercase</td>
+									                <td>-</td>
+									                <td>Ctrl + U</td>
+									            </tr>
+									            <tr>
+									                <td>Lowercase</td>
+									                <td>-</td>
+									                <td>Ctrl + Shift + U</td>
+									            </tr>
+									            <tr>
+									                <td>Titlecase</td>
+									                <td>-</td>
+									                <td>Ctrl + Alt + Shift + U</td>
+									            </tr>
+									            <tr>
+									                <td>Insert Current Date</td>
+									                <td>-</td>
+									                <td>Ctrl + Shift + 1</td>
+									            </tr>
+									        </tbody>
+									    </table>
+                				</section>
+                				
+                				
+								<hr style="border-bottom: 1px solid #DA6426;margin-bottom: 60px;margin-top: 60px; margin-left:-35px;margin-right: -35px;">
+                				
+                				<section>  
+								    <h2>相关资源</h2>
+								    <ul>
+								        <li><a href="#">Ghost 中文文档</a></li>
+								        <li><a href="#">Handlebars</a></li>
+								        <li><a href="#">Node.js</a></li>
+								        <li><a href="#">Ghost 资料/教程</a></li>
+								    </ul>
+								</section>
+								
+								<hr style="border-bottom: 1px solid #DA6426;margin-bottom: 60px;margin-top: 60px; margin-left:-35px;margin-right: -35px;">
+
+								<section>  
+								    <h2>Default.hbs</h2>
+								    <em>default.hbs 文件中可以用到的 Handlebars 指令</em>
+								    <h3>Head</h3>
+								    <code>{{meta_title}}
+								        <br>{{meta_description}}
+								        <br>{{ghost_head}}
+								        <br>
+								    </code>
+								    <h3>Body</h3>
+								    <code>{{body_class}}
+								        <br>{{{body}}}
+								        <br>
+								    </code>
+								    <h3>Footer</h3>
+								    <code>{{@blog.title}}
+								        <br>{{@blog.url}}/rss/
+								        <br>{{ghost_foot}}
+								        <br>
+								    </code>
+								</section>
+								
+								<hr style="border-bottom: 1px solid #DA6426;margin-bottom: 60px;margin-top: 60px; margin-left:-35px;margin-right: -35px;">
+								<section>  
+								    <h2>
+								        <a href="#">主题构成</a>
+								    </h2>
+								    <ul>
+								        <li>/assets
+								            <ul>
+								                <li>/css
+								                    <ul>
+								                        <li>screen.css</li>
+								                        <li>post.css</li>
+								                    </ul>
+								                </li>
+								                <li>/fonts</li>
+								                <li>/images</li>
+								                <li>/js</li>
+								                <li>/partials
+								                    <ul>
+								                        <li>pagination.hbs</li>
+								                    </ul>
+								                </li>
+								            </ul>
+								        </li>
+								        <li>default.hbs</li>
+								        <li>index.hbs [必须]</li>
+								        <li>post.hbs [必须]</li>
+								        <li>page.hbs [可选]</li>
+								        <li>tag.hbs [可选]</li>
+								        <li>package.json</li>
+								    </ul>
+								</section>
+								
+								<hr style="border-bottom: 1px solid #DA6426;margin-bottom: 60px;margin-top: 60px; margin-left:-35px;margin-right: -35px;">
+								
+								<section>  
+								    <h2>
+								        <a href="#">Handlebars</a>
+								    </h2>
+								    <h3>注释</h3>
+								    <code>{{! 'A Comment' }}</code>
+								    <h3>HTML 转义</h3>
+								    <code>{{content}}</code>
+								    <h3>if 指令</h3>
+								    <code>{{#if author.website}}
+								        <br>{{else}}
+								        <br>{{/if}}</code>
+								    <h3>unless 指令</h3>
+								    <code>{{#unless author.website}}
+								        <br>{{/unless}}</code>
+								    <h3>foreach 指令</h3>
+								    <code>{{#foreach posts}}
+								    <br>{{/foreach}}</code>
+								    <h3>块表达式</h3>
+								    <code>{{#author}}
+								    <br>{{/author}}</code>
+								</section>
+								
+								<hr style="border-bottom: 1px solid #DA6426;margin-bottom: 60px;margin-top: 60px; margin-left:-35px;margin-right: -35px;">
+								
+								<section>  
+								    <h2>Index.hbs</h2>
+								    <em>index.hbs 文件中可以使用的 Handlebars 指令</em>
+								    <h3>加载父模板 default.hbs</h3>
+								    <code>{{!&lt; default}}
+								        <br>
+								    </code>
+								    <h3>Header</h3>
+								    <code>{{#if @blog.cover}}
+								        <br>{{@blog.cover}}
+								        <br>{{/if}}
+								        <br>
+								        <br>{{#if @blog.logo}}
+								        <br>{{@blog.logo}}
+								        <br>{{/if}}
+								        <br>{{@blog.title}}
+								        <br>{{@blog.description}}</code>
+								    <h3>文章</h3>
+								    <code>{{#foreach posts}}
+								        <br>{{/foreach}}
+								        <br>{{post_class}}
+								        <br>{{date format='YYYY-MM-DD'}}
+								        <br>{{date published_at format="MMMM DD, YYYY"}}
+								        <br>{{date published_at timeago="true"}}
+								        <br>
+								        <br>{{#if tags}}
+								        <br>{{tags}}
+								        <br>{{tags separator=" | "}}
+								        <br>{{/if}}
+								        <br>
+								        <br>{{excerpt}}
+								        <br>{{excerpt characters="140"}}
+								        <br>{{content}}
+								        <br>{{content words="100"}}
+								        <br>
+								    </code>
+								    <h3>分页</h3>
+								    <code>{{pagination}}</code>
+								</section>
+								
+								<hr style="border-bottom: 1px solid #DA6426;margin-bottom: 60px;margin-top: 60px; margin-left:-35px;margin-right: -35px;">
+								
+								<section>  
+								    <h2>API 概览</h2>
+								    <ol>
+								        <li>@blog.title</li>
+								        <li>@blog.url</li>
+								        <li>@blog.logo</li>
+								        <li>@blog.description</li>
+								        <li>meta_title</li>
+								        <li>meta_description</li>
+								        <li>body</li>
+								        <li>body_class</li>
+								        <li>ghost_head</li>
+								        <li>ghost_foot</li>
+								        <li>pagination
+								            <ul>
+								                <li>next</li>
+								                <li>page</li>
+								                <li>pages</li>
+								                <li>page_url prev</li>
+								                <li>page_url next</li>
+								                <li>prev</li>
+								            </ul>
+								        </li>
+								        <li>post_class</li>
+								        <li>post, posts</li>
+								        <li>author
+								            <ul>
+								                <li>name</li>
+								                <li>website</li>
+								                <li>bio</li>
+								                <li>cover</li>
+								                <li>email</li>
+								                <li>image</li>
+								            </ul>
+								        </li>
+								        <li>excerpt [characters][words]</li>
+								        <li>content [characters][words]</li>
+								        <li>url [absolute]</li>
+								        <li>tags [separator]
+								            <ul>
+								                <li>name</li>
+								            </ul>
+								        </li>
+								        <li>date [format][timeago]</li>
+								        <li>id</li>
+								        <li>published_at</li>
+								    </ol>
+								</section>
+								
+								<hr style="border-bottom: 1px solid #DA6426;margin-bottom: 60px;margin-top: 60px; margin-left:-35px;margin-right: -35px;">
+								
+								<section>  
+								    <h2>Post.hbs</h2>
+								    <em>post.hbs 文件中可以使用的 Handlebars 指令</em>
+								    <h3>加载父模板 default.hbs</h3>
+								    <code>{{!&lt; default}}
+								        <br>
+								    </code>
+								    <h3>Header</h3>
+								    <code>{{#if @blog.cover}}
+								        <br>{{@blog.cover}}
+								        <br>{{/if}}
+								        <br>
+								        <br>{{#if @blog.logo}}
+								        <br>{{@blog.logo}}
+								        <br>{{/if}}
+								        <br>
+								        <br>{{@blog.title}}
+								        <br>{{@blog.description}}
+								        <br>{{date published_at timeago="true"}}
+								        <br>
+								    </code>
+								    <h3>文章</h3>
+								    <code>{{post_class}}
+								        <br>{{#if}}
+								        <br>{{else}}
+								        <br>{{/if}}
+								        <br>
+								        <br>{{#post}}
+								        <br>{{/post}}
+								        <br>{{url}}
+								        <br>{{{title}}}
+								        <br>{{date format='YYYY-MM-DD'}}
+								        <br>{{date published_at format="MMMM DD, YYYY"}}
+								        <br>{{#if tags}} {{tags}}
+								        <br>{{tags separator=" | "}}
+								        <br>{{/if}}
+								        <br>{{content}}
+								        <br>
+								    </code>
+								    <h3>作者信息</h3>
+								    <code>{{#author}}
+								        <br>{{/author}}
+								        <br>
+								        <br>{{#if author}}
+								        <br>{{/if}}
+								        <br>
+								        <br>{{author.name}}
+								        <br>{{author.bio}}
+								        <br>{{author.email}
+								        <br>{{author.website}}
+								        <br>{{author.image}}
+								        <br>{{author.cover}}
+								        <br>
+								    </code>
+								</section>
+                			</section>
+                		</article>
+                		</div>
+                	</div>
+                	
+                	
+                    <!-- 右侧栏 -->
+	                <div class="col-sm-4">
+	                	<div class="animated slideInRight" id="bounceIn">
+	                    <div class="widget">
+	                        <h4 class="title">社区</h4>
+	                        <p>QQ群：277327792</p>
+	                        <p><a href="#" title="Ghost中文网问答社区"><span class="glyphicon glyphicon-cloud"></span>问答社区</a></p>
+	                        <p><a href="#" title="Ghost中文网问答微博"><span class="glyphicon glyphicon-eye-open"></span>官方微博</a></p>
+	                    </div>
+	
+	                     <div class="widget">
+	                        <h4 class="title">下载Ghost</h4>
+	                        <a href="#" class="btn btn-default">Ghost 中文版( 0.7.4 )</a>
+	                    </div>
+	                    
+	                    
+	                    <div class="widget">
+	                        <h4 class="title">标签云</h4>
+	                        <div class="tag-cloud">
+	                            <a href="#">jQuery</a>
+	                            <a href="#">Ghost 0.7版本</a>
+	                            <a href="#">开源</a>
+	                            <a href="#">助手函数</a>
+	                            <a href="#">标签云</a>
+	                            <a href="#">导航</a>
+	                            <a href="#">自定义页面</a>
+	                            <a href="#">静态页面</a>
+	                            <a href="#">Roon.io</a>
+	                            <a href="#">配置文件</a>
+	                            <a href="#">又拍云储存</a>
+	                            <a href="#">上传</a>
+	                            <a href="#">handlebars</a>
+	                            <a href="#">邮件</a>
+	                            <a href="#">快捷键</a>
+	                            <a href="#">用户指南</a>
+	                            <a href="#">主题市场</a>
+	                            <a href="#">新版本发布</a>
+	                            <a href="#">...</a>
+	                        </div>
+	                    </div>
+	                    </div>
+	                </div>            	
+        		</div>
+        	</div>
+        </section>
+            <footer class="main-footer">
+		        <div class="container">
+		            <div class="row">
+		
+		            <div class="col-md-4">
+		                <div class="widget">
+		                    <h4 class="title">最新文章</h4>
+		                    <div class="recent-single-post">
+		                        <a href="#">自定义文章摘要（Excerpt）</a>
+		                        <div class="date">2017年8月9日</div>
+		                    </div>
+		                    <div class="recent-single-post">
+		                        <a href="#">首要“标签”</a>
+		                        <div class="date">2017年8月3日</div>
+		                    </div>
+		                    <div class="recent-single-post">
+		                        <a href="#">Ghost 1.0 版本正式发布</a>
+		                        <div class="date">2017年7月29日</div>
+		                    </div>
+		                </div>
+		            </div>
+		
+		            <div class="col-sm-4">
+		                <div class="widget">
+		                    <h4 class="title">标签云</h4>
+		                        <div class="tag-cloud">
+		                            <a href="#">Ghost</a>
+		                            <a href="#">新版本发布</a>                                
+		                            <a href="#">Javascript</a>
+		                            <a href="#">Promise</a>
+		                            <a href="#">主题</a>
+		                            <a href="#">Node.js</a>
+		                            <a href="#">MySQL</a>
+		                            <a href="#">Neinx</a>
+		                            <a href="#">阿里云服务器</a>
+		                            <a href="#">Ubuntu</a>
+		                            <a href="#">深度玩转Ghost</a>
+		                            <a href="#">Theme</a>
+		                            <a href="#">助手函数</a>
+		                            <a href="#">Markdown</a>
+		                            <a href="#">反向代理</a>
+		                            <a href="#">...</a>
+		                        </div>
+		                </div>
+		            </div>
+		
+		            <div class="col-sm-4">
+		                <div class="widget">
+		                    <h4 class="title">合作伙伴</h4>
+		                    <div class="friend-links tag-cloud">
+		                        <a href="#">Bootstrap中文网</a>
+		                        <a href="#">开放CDN服务</a>
+		                        <a href="#">Grunt中文网</a>
+		                        <a href="#">Gulp中文网</a>                        
+		                    </div>
+		                    <div class="friend-links tag-cloud">
+		                        <a href="#">Lodsh中文文档</a>
+		                        <a href="#">jQuery中文文档</a>                        
+		                    </div>
+		                    <div class="friend-links tag-cloud">
+		                        <a href="#">阿里云</a>                        
+		                    </div>
+		                    <div class="friend tag-cloud">
+		                        <a href="#">又拍云</a>
+		                        <a href="#">七牛云存储</a>                        
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        </div>
+		    </footer>
+		
+		    <div class="copyright">
+		        <div class="container">
+		            <div class="row">
+		                <div class="col-sm-12">
+		                    <span>Copyright © <a href="http://www.ghostchina.com/">Ghost中文网</a> | <a href="#">京ICP备11008151号</a> | 京公网安备11010802014853</span>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+        <script src="./js/jquery-1.12.3.min.js"></script>
+    	<script src="./js/bootstrap.min.js"></script>
+	</body>
+</html>
